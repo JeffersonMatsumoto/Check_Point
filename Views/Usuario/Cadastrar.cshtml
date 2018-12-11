@@ -1,0 +1,103 @@
+@using Check_Point.Models;
+@using Check_Point.Controllers;
+@using Check_Point.Repositorios; 
+@using Microsoft.AspNetCore.Http
+
+@{
+    ViewBag.Title = "Cadastrar Usuário";
+    Layout = "MasterPageDeslogado";
+}
+
+<!-- TESTE MODAL -->
+<!-- 
+
+<div class="highlights">
+  <div class="highlights-item">
+    <label class="highlights-button" for="modal-chaves">Cadastre-se</label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal_chaves" />
+<div class="modal">
+  <div class="modal-content">
+    <h1>Cadastro de novo usuário</h1>
+    
+  </div>
+  <label class="modal-close" for="modal_chaves"></label>
+</div>
+
+
+ -->
+
+<h1>Cadastro de usuário</h1>
+
+<form action="/Usuario/Cadastrar" method="POST">
+
+<h3>
+    @ViewBag.MensagemErroNOME
+    @TempData["MensagemErroNOME"]
+</h3>
+    <label>
+        Nome:
+        <input type="text" name="nome" required="true">
+    </label>
+
+<h3>
+    @ViewBag.MensagemErroEMAIL
+    @TempData["MensagemErroEMAIL"]
+</h3>
+    <label>
+        E-mail:
+        <input type="email" name="email" required="true">
+    </label>
+
+<h3>
+    @ViewBag.MensagemErroSENHA
+    @TempData["MensagemErroSENHA"]
+</h3>
+    <label>
+        Senha:
+        <input type="password" name="senha" maxlength="12" minlength="8" required="true">
+    </label>
+
+
+    <input class=btn-enviar type="submit" value="Enviar">
+
+</form>
+
+<div class="comentario">
+    @foreach (var item in ViewData["ComentariosAtt"] as List<ComentarioModel>)
+        {
+            <ol>
+                <li>
+                    <div>
+
+                        <div class="topo-comentario">
+                            <div class="avatar">
+                                <img class="img-avatar" src="/Imagens/user.png">
+                            </div>
+
+                            <div class="comentario-nome">
+                                @item.Usuario.Nome
+                            </div>
+                        </div>
+                        
+                        <div class="comentario-texto">
+                            <p class="p-texto">
+                                @item.Texto
+                            </p>
+                        </div>
+                        
+                        <div class="comentario-data">
+                            @item.DataCriacao
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        } 
+</div>
+  
+
+
+
+@* pattern="^[a-zA-Z0-9]+$" *@

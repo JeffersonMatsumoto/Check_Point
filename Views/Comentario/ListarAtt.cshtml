@@ -1,0 +1,50 @@
+@using Check_Point.Models; 
+@using Microsoft.AspNetCore.Http;
+@{
+    ViewBag.Title = "ListarAtt Comentário";
+    Layout = "MasterPageLogado";
+}
+
+<h1>Lista de Comentários</h3>
+
+<table>
+
+    <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Texto</th>
+                <th>Data de Criação</th>
+                <th>Status</th>
+            </tr>
+    </thead>
+    
+    <tbody>
+        @foreach (var item in ViewData["ComentariosAtt"] as List<ComentarioModel>)
+        {
+            <tr>
+                <td>
+                    @item.Id
+                </td>
+
+                <td>
+                    @item.Usuario.Nome
+                </td>
+
+                <td>
+                    @item.Texto
+                </td>
+                
+                <td class="td-data">
+                    @item.DataCriacao
+                </td>
+
+                <td>
+                    @item.Status
+                </td>
+            </tr>
+        } 
+    </tbody>
+
+</table>
+    <!-- <a style="display:block" href="/Comentario/Cadastrar"> Cadastrar outro comentário </a> -->

@@ -1,0 +1,32 @@
+@using Check_Point.Models; 
+
+@using Microsoft.AspNetCore.Http
+
+@{
+    ViewBag.Title = "Cadastrar Comentário";
+    Layout = "MasterPageLogado";
+}
+@*
+<h4>
+   Seja bem vindo, @HttpContext.Session.GetString("nomeUsuario")
+</h4>*@
+
+
+<h1>Cadastro de Comentário</h1>
+
+<h3> 
+    @ViewBag.Mensagem
+</h3>
+
+<form action="/Comentario/Cadastrar" method="POST">
+
+    <label class="comentario">
+        <p> 
+        Comentário: 
+        </p>
+        <textarea style="resize: none" maxlength="500" name="texto"></textarea>
+    </label>
+
+    <input class=btn-enviar type="submit" value="Enviar">
+
+</form>
