@@ -69,7 +69,7 @@ namespace Check_Point.Repositorios
                     // comentario.Usuario.Nome.ToString();
                     // comentario.Texto.Replace("\n", "x");
                     comentario.Status = "Pendente";
-                    comentario.Texto.First().ToString().ToUpper();
+                    comentario.Texto = char.ToUpper(comentario.Texto[0]) + comentario.Texto.Substring(1);
                     sw.WriteLine($"{comentario.Id};{comentario.Usuario.Nome};{comentario.Texto.Replace(System.Environment.NewLine, " ").Trim()};{comentario.DataCriacao};{comentario.Status}");
                     // sw.WriteLine($"{comentario.Id};{comentario.Usuario};{comentario.Texto};{comentario.Status};{comentario.DataCriacao}");
                 }
