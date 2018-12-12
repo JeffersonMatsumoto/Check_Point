@@ -1,0 +1,123 @@
+@using Check_Point.Models; 
+@using Check_Point.Controllers; 
+@using Microsoft.AspNetCore.Http;
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <title> @ViewBag.Title </title>
+    <link href="/css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/dropdown.css" rel="stylesheet" type="text/css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('.toggle').click(function () {
+                $('ul').toggleClass('active');
+                $(this).find('i').toggleClass('fa-times');
+            })
+        })
+    </script>
+</head>
+
+    <div class="topo">
+        <header>
+
+            <div class="logo">
+                <a href="../Usuario/Cadastrar">
+                <img class="logo-img" src="/Imagens/logotipo.png" alt="logotipo">
+                </a>
+            </div>
+
+            <div class="toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <nav class="menu">
+
+                <a class="logo-escrito" href="../Usuario/Cadastrar">Check Point</a>
+
+                <ul class="pages">
+                    
+                    <div class="dropdown">
+                    <button class="dropbtn">Comentários</button>
+                    <div class="dropdown-content">
+                            <li>
+                                <a href="/Comentario/Cadastrar">Cadastrar comentários</a>
+                            </li>
+
+                            <li>
+                                <a href="/Comentario/Listar">Listar comentários</a>
+                            </li>
+                    </div>
+                    </div>
+
+                            <!-- <li>
+                                <a href="/Comentario/Cadastrar">Cadastrar comentários</a>
+                            </li>
+
+                            <li>
+                                <a href="/Comentario/Listar">Listar comentários</a>
+                            </li> -->
+                    
+                    @if (Context.Session.GetString("tipoUsuario") == "adm")
+                    {
+                        <li>
+                            <a href="/Usuario/Listar">Usuários cadastrados</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/Comentario/Aprovar">Aprovar ou rejeitar comentários</a>
+                        </li>
+                    }
+
+                    @if(Context.Session.GetString("nomeUsuario") != null)
+                    {
+                        <li>
+                            <p class="msg-boasvindas">
+                                Seja bem vindo, 
+                            </p>   
+                                <b> 
+                                    @Context.Session.GetString("nomeUsuario")
+                                </b>
+                        </li>
+                    }
+                    
+                    @if (Context.Session.GetString("tipoUsuario") != null || Context.Session.GetString("nomeUsuario") != null || Context.Session.GetString("idUsuario") != null)
+                    {
+                    <li>
+                            <a href="/Usuario/Login"> Sair </a>
+                    </li>
+                    }
+                </ul>
+
+            </nav>
+
+        </header>
+    </div>
+
+<body>
+
+    <div class="conteudo-body">
+    @RenderBody()
+    </div>
+</body>
+
+    <footer>
+
+        <a class="logotipo-footer" href="../Usuario/Cadastrar">
+            <img class="logo-img-footer" src="/Imagens/logotipo.png" alt="logotipo">
+        </a>
+
+        <div class="footer-final">
+                    <p>Escola SENAI de Informática</p>
+            <p>© 2018 Carfel. Todos os direitos reservados </p>
+            <p class="bandeirinha">Alameda Barão de Limeira, 539 - Santa Cecilia, São Paulo - SP, 01202-001</p>
+        </div>
+
+    </footer>
+</html>

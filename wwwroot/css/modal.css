@@ -1,0 +1,125 @@
+  /* .modal-container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0,.5);
+    z-index: 2000; */
+    /* display: flex; */
+    /* display: none; */
+    /*<!-- @*horizintal alinhamento*@ -->*/
+    /* justify-content: center;  */
+    /*vertical*/
+    /* align-items: center;
+} */
+
+/* .modal{
+    background: white;
+    width: 60%; */
+    /*para de diminuir*/
+    /* min-width: 300px;  */
+    /* padding: 40px;
+    border: 10px solid black;
+    box-shadow: 0 0 0 10px white;
+    position: relative;
+} */
+
+/* @keyframes modal{
+  from{
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+} */
+
+/* .fechar{
+    position: absolute;
+    font-size: 1.2em;
+    top: -30px;
+    right: -30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 4px solid white;
+    background: red;
+    color: white;
+    /*clicavel*/
+    /* cursor: pointer;
+    box-shadow: 0 4px 0 4px rgba(0, 0, 0, .3)
+} */
+
+/* .modal-container.mostrar{
+  display: flex;
+} */
+
+
+/* .mostrar.modal{
+  animation: modal .3s;
+} */
+
+/* https://www.youtube.com/watch?v=fu-enUG2VEE */
+
+/* The Modal (background) */
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-cadastrar {
+  width: 100%;
+  -moz-box-shadow: inset 0px 34px 0px -15px #b54b3a;
+  -webkit-box-shadow: inset 0px 34px 0px -15px #b54b3a;
+  box-shadow: inset 0px 34px 0px -15px #b54b3a;
+  background-color: #a73f2d;
+  border: 1px solid #241d13;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 1%;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #7a2a1d;
+  margin: 1em auto;
+}
+
+.btn-cadastrar:hover {
+  background-color: #b34332;
+}

@@ -1,0 +1,27 @@
+@{
+    ViewBag.Title = "Login";
+    Layout = "MasterPageDeslogado";
+}
+
+<!-- <link href="/css/login.css" rel="stylesheet" type="text/css"/> -->
+
+<h1>Login</h1>
+
+<h3>
+@ViewBag.Mensagem
+</h3>
+
+<form action="/Usuario/Login" method="POST">
+    
+    <label >
+        E-mail:
+        <input class="input-style" type="text" name="email" required="true"  placeholder="exemplo@provedora.com">
+    </label>
+
+    <label class="cor-azul">
+        Senha:
+        <input class="input-style" type="password" name="senha" required="true">
+    </label>
+
+    <input class=btn-enviar type="submit" value="Entrar">
+</form>

@@ -1,0 +1,81 @@
+@using Check_Point.Models; 
+@using Microsoft.AspNetCore.Http;
+
+@{
+    ViewBag.Title = "Home";
+    Layout = "MasterPageDeslogado";
+}
+
+<h1>Check Point</h1>
+
+@* <form action="/Home/" method="POST">
+
+<h3>
+    @ViewBag.MensagemErroNOME
+</h3>
+    <label>
+        Nome:
+        <input type="text" name="nome">
+    </label>
+
+<h3>
+    @ViewBag.MensagemErroEMAIL
+</h3>
+    <label>
+        Email:
+        <input type="email" name="email">
+    </label>
+
+<h3>
+    @ViewBag.MensagemErroSENHA
+</h3>
+    <label>
+        Senha:
+        <input type="password" name="senha" maxlength="12">
+    </label>
+
+
+    <input class=btn-enviar type="submit" value="Enviar">
+
+</form> *@
+
+<table>
+
+    <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Texto</th>
+                <th>Data de Criação</th>
+                <th>Status</th>
+            </tr>
+    </thead>
+    
+    <tbody>
+        @foreach (var item in ViewData["ComentariosAtt"] as List<ComentarioModel>)
+        {
+            <tr>
+                <td>
+                    @item.Id
+                </td>
+
+                <td>
+                    @item.Usuario.Nome
+                </td>
+
+                <td>
+                    @item.Texto
+                </td>
+                
+                <td>
+                    @item.DataCriacao
+                </td>
+
+                <td>
+                    @item.Status
+                </td>
+            </tr>
+        } 
+    </tbody>
+
+</table>

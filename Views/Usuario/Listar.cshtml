@@ -1,0 +1,39 @@
+@using Check_Point.Models; 
+
+@{
+    Layout = "MasterPageLogado";
+}
+
+<h1>Lista de Usuários Cadastrados</h3>
+
+@TempData["Mensagem"]
+<table>
+
+    <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Email</th>
+            </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in ViewData["Usuarios"] as List<UsuarioModel>)
+        {
+            <tr>
+                <td>
+                    @item.Id
+                </td>
+
+                <td>
+                    @item.Nome
+                </td>
+                
+                <td>
+                    @item.Email
+                </td>
+            </tr>
+        } 
+    </tbody>
+
+</table>

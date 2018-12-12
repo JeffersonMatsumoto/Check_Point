@@ -1,0 +1,133 @@
+@using Check_Point.Models;
+@using Check_Point.Controllers;
+@using Check_Point.Repositorios; 
+@using Microsoft.AspNetCore.Http
+
+@{
+    ViewBag.Title = "Cadastrar Usuário";
+    Layout = "MasterPageDeslogado";
+}
+<button id="myBtn" class="btn-cadastrar">Cadastre-se agora no Check Point, é totalmente <b>GRATUITO</b></button>
+        <!-- <script>
+            function iniciaModal(modalID){
+                const modal = document.getElementsByClassName(modalID);
+                console.log(modal);
+            }
+
+            iniciaModal('modal-cadastro')
+        </script> -->
+
+<div class="comentario">
+    @foreach (var item in ViewData["ComentariosAtt"] as List<ComentarioModel>)
+        {
+            <ol>
+                <li>
+                    <div>
+
+                        <div class="topo-comentario">
+                            <div class="avatar">
+                                <img class="img-avatar" src="/Imagens/user.png">
+                            </div>
+
+                            <div class="comentario-nome">
+                                @item.Usuario.Nome
+                            </div>
+                        </div>
+                        
+                        <div class="comentario-texto">
+                            <p class="p-texto">
+                                @item.Texto
+                            </p>
+                        </div>
+                        
+                        <div class="comentario-data">
+                            @item.DataCriacao
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        } 
+</div>
+
+
+
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+        <!-- conteudo -->
+        <h1>Cadastro de usuário</h1>
+
+                <form action="/Usuario/Cadastrar" method="POST">
+
+                <h3>
+                    @ViewBag.MensagemErroNOME
+                    @TempData["MensagemErroNOME"]
+                </h3>
+                    <label>
+                        Nome:
+                        <input type="text" name="nome" required="true">
+                    </label>
+
+                <h3>
+                    @ViewBag.MensagemErroEMAIL
+                    @TempData["MensagemErroEMAIL"]
+                </h3>
+                    <label>
+                        E-mail:
+                        <input type="email" name="email" required="true">
+                    </label>
+
+                <h3>
+                    @ViewBag.MensagemErroSENHA
+                    @TempData["MensagemErroSENHA"]
+                </h3>
+                    <label>
+                        Senha:
+                        <input type="password" name="senha" maxlength="12" minlength="6" required="true">
+                    </label>
+
+
+                    <input class=btn-enviar type="submit" value="Enviar">
+
+                </form>
+</div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+
+
+@* pattern="^[a-zA-Z0-9]+$" *@
