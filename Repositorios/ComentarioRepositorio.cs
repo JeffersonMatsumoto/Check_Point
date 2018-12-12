@@ -20,7 +20,6 @@ namespace Check_Point.Repositorios
 
                 if (id.ToString() == linha[0])//verificar se o id é valido, o id da linha é o id passado
                 {
-
                     linhas[i] = "";
                     break;
                 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\ccgm1\Documents\Jefferson\CURSO\Projetos\Check_Point\bin\Debug\netcoreapp2.1\Check_Point.deps.json
 C:\Users\ccgm1\Documents\Jefferson\CURSO\Projetos\Check_Point\bin\Debug\netcoreapp2.1\Check_Point.runtimeconfig.json
 C:\Users\ccgm1\Documents\Jefferson\CURSO\Projetos\Check_Point\bin\Debug\netcoreapp2.1\Check_Point.runtimeconfig.dev.json
@@ -30,3 +31,37 @@ C:\Users\ccgm1\Documents\Jefferson\CURSO\Projetos\Check_Point\obj\Debug\netcorea
 C:\Users\ccgm1\Documents\Jefferson\CURSO\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Check_Point.dll
 C:\Users\ccgm1\Documents\Jefferson\CURSO\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Check_Point.pdb
 C:\Users\ccgm1\Documents\Jefferson\CURSO\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Check_Point.csproj.CopyComplete
+=======
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\bin\Debug\netcoreapp2.1\Check_Point.deps.json
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\bin\Debug\netcoreapp2.1\Check_Point.runtimeconfig.json
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\bin\Debug\netcoreapp2.1\Check_Point.runtimeconfig.dev.json
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\bin\Debug\netcoreapp2.1\Check_Point.dll
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\bin\Debug\netcoreapp2.1\Check_Point.pdb
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\bin\Debug\netcoreapp2.1\Check_Point.Views.dll
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\bin\Debug\netcoreapp2.1\Check_Point.Views.pdb
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Check_Point.csprojAssemblyReference.cache
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Check_Point.csproj.CoreCompileInputs.cache
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Check_Point.RazorAssemblyInfo.cache
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Check_Point.RazorAssemblyInfo.cs
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Check_Point.AssemblyInfoInputs.cache
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Check_Point.AssemblyInfo.cs
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Check_Point.TagHelpers.input.cache
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Check_Point.TagHelpers.output.cache
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Check_Point.RazorCoreGenerate.cache
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Razor\Views\Comentario\Aprovar.g.cshtml.cs
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Razor\Views\Comentario\Cadastrar.g.cshtml.cs
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Razor\Views\Comentario\Listar.g.cshtml.cs
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Razor\Views\Comentario\ListarAtt.g.cshtml.cs
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Razor\Views\Main\Home.g.cshtml.cs
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Razor\Views\Shared\MasterPageDeslogado.g.cshtml.cs
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Razor\Views\Shared\MasterPageLogado.g.cshtml.cs
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Razor\Views\Usuario\Cadastrar.g.cshtml.cs
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Razor\Views\Usuario\Listar.g.cshtml.cs
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Razor\Views\Usuario\Login.g.cshtml.cs
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Check_Point.RazorTargetAssemblyInfo.cache
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Check_Point.RazorTargetAssemblyInfo.cs
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Check_Point.Views.pdb
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Check_Point.dll
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Check_Point.pdb
+C:\Users\40956998844\Documents\Exercícios C#\Projetos\Check_Point\obj\Debug\netcoreapp2.1\Check_Point.csproj.CopyComplete
+>>>>>>> 396ba8f7eea04919091e70bc088059562ccb5d52

@@ -388,7 +388,10 @@ ol{
 .img-avatar{
     margin-top: 0.5em;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 396ba8f7eea04919091e70bc088059562ccb5d52
 /* ===============================================BREAKPOINT================================================== */
 
 @media all and (max-width:480px){
@@ -425,7 +428,10 @@ ol{
         width: 100%;
         display: flex;
         justify-content: center;
+<<<<<<< HEAD
         margin: 0.1em;
+=======
+>>>>>>> 396ba8f7eea04919091e70bc088059562ccb5d52
         padding: 0.3em;
         background-color: #f1f1f1;
         border-left: #777 solid 4px;
