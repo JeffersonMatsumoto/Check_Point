@@ -44,7 +44,7 @@
                 <ul class="pages">
                     
                     <div class="dropdown">
-                    <button class="dropbtn">Comentários</button>
+                    <button class="dropbtn">Comentários  <i class="fas fa-chevron-circle-down"></i></button>
                     <div class="dropdown-content">
                             <li>
                                 <a href="/Comentario/Cadastrar">Cadastrar comentários</a>
@@ -76,7 +76,7 @@
                     }
                     @if(Context.Session.GetString("nomeUsuario") != null)
                     {
-                        <li>
+                        <li id="li-msg">
                             <p class="msg-boasvindas">
                                 Seja bem vindo, 
                             </p>   
