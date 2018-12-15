@@ -11506,11 +11506,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\ccgm1\\Documents\\Jefferson\\CURSO\\Projetos\\Check_Point\\Check_Point.csproj",
+      "projectUniqueName": "C:\\Users\\ccgm1\\Documents\\Jefferson\\CURSO\\Projetos\\Check_Point\\Check_Point.csproj",
       "projectName": "Check_Point",
-      "projectPath": "c:\\Users\\ccgm1\\Documents\\Jefferson\\CURSO\\Projetos\\Check_Point\\Check_Point.csproj",
+      "projectPath": "C:\\Users\\ccgm1\\Documents\\Jefferson\\CURSO\\Projetos\\Check_Point\\Check_Point.csproj",
       "packagesPath": "C:\\Users\\ccgm1\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\ccgm1\\Documents\\Jefferson\\CURSO\\Projetos\\Check_Point\\obj\\",
+      "outputPath": "C:\\Users\\ccgm1\\Documents\\Jefferson\\CURSO\\Projetos\\Check_Point\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -11557,13 +11557,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache c:\\Users\\ccgm1\\Documents\\Jefferson\\CURSO\\Projetos\\Check_Point\\obj\\Check_Point.csproj.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

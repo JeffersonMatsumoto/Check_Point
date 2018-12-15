@@ -7,7 +7,6 @@
     ViewBag.Title = "Cadastrar Usuário";
     Layout = "MasterPageDeslogado";
 }
-<<<<<<< HEAD
 <button id="myBtn" class="btn-cadastrar">Cadastre-se agora no Check Point, é totalmente <b>GRATUITO</b></button>
         <!-- <script>
             function iniciaModal(modalID){
@@ -17,65 +16,6 @@
 
             iniciaModal('modal-cadastro')
         </script> -->
-=======
-
-<!-- TESTE MODAL -->
-<!-- 
-
-<div class="highlights">
-  <div class="highlights-item">
-    <label class="highlights-button" for="modal-chaves">Cadastre-se</label>
-  </div>
-</div>
-
-<input type="checkbox" id="modal_chaves" />
-<div class="modal">
-  <div class="modal-content">
-    <h1>Cadastro de novo usuário</h1>
-    
-  </div>
-  <label class="modal-close" for="modal_chaves"></label>
-</div>
-
-
- -->
-
-<h1>Cadastro de usuário</h1>
-
-<form action="/Usuario/Cadastrar" method="POST">
-
-<h3>
-    @ViewBag.MensagemErroNOME
-    @TempData["MensagemErroNOME"]
-</h3>
-    <label>
-        Nome:
-        <input type="text" name="nome" required="true">
-    </label>
-
-<h3>
-    @ViewBag.MensagemErroEMAIL
-    @TempData["MensagemErroEMAIL"]
-</h3>
-    <label>
-        E-mail:
-        <input type="email" name="email" required="true">
-    </label>
-
-<h3>
-    @ViewBag.MensagemErroSENHA
-    @TempData["MensagemErroSENHA"]
-</h3>
-    <label>
-        Senha:
-        <input type="password" name="senha" maxlength="12" minlength="8" required="true">
-    </label>
-
-
-    <input class=btn-enviar type="submit" value="Enviar">
-
-</form>
->>>>>>> 396ba8f7eea04919091e70bc088059562ccb5d52
 
 <div class="comentario">
     @foreach (var item in ViewData["ComentariosAtt"] as List<ComentarioModel>)
@@ -108,7 +48,6 @@
             </ol>
         } 
 </div>
-<<<<<<< HEAD
 
 
 
@@ -188,9 +127,6 @@ window.onclick = function(event) {
 }
 </script>
 
-=======
-  
->>>>>>> 396ba8f7eea04919091e70bc088059562ccb5d52
 
 
 

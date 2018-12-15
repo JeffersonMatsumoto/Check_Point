@@ -1,9 +1,6 @@
 @using Check_Point.Models; 
-<<<<<<< HEAD
 @using Check_Point.Controllers; 
 @using Check_Point.Repositorios; 
-=======
->>>>>>> 396ba8f7eea04919091e70bc088059562ccb5d52
 @using Microsoft.AspNetCore.Http;
 @{
     ViewBag.Title = "Aprovar Comentário";
@@ -53,7 +50,6 @@
                 <td class="rej">
                     <a class="a-r" href="/Comentario/Aprovar?id=@item.Id"> Rejeitar </a>
                 </td>
-<<<<<<< HEAD
                 
                 @if(@item.Status == "Aprovado")
                 {
@@ -66,12 +62,6 @@
                 }     
                     
                 
-=======
-
-                <td class="aprov">
-                    <a class="a-r" href="/Comentario/Manter?id=@item.Id"> Aprovar </a>
-                </td>
->>>>>>> 396ba8f7eea04919091e70bc088059562ccb5d52
             </tr>
         } 
     </tbody>

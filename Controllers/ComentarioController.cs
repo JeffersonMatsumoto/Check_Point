@@ -19,6 +19,11 @@ namespace Check_Point.Controllers
 
         [HttpPost]
         public IActionResult Cadastrar(IFormCollection form){
+
+            if(HttpContext.Session.GetString("nomeUsuario") == null){
+                return RedirectToAction("Login", "Usuario");
+            }
+
             string nomeUsuario = HttpContext.Session.GetString("nomeUsuario");
             ComentarioModel comentario = new ComentarioModel(texto: form["texto"], usuario: nomeUsuario);//, status: form["status"], dataCriacao: DateTime.Parse(form["dataCriacao"])
             ComentarioRepositorio comentarioRepositorio = new ComentarioRepositorio();
@@ -47,6 +52,10 @@ namespace Check_Point.Controllers
 
         [HttpGet]
         public IActionResult Listar(){
+
+            if(HttpContext.Session.GetString("nomeUsuario") == null){
+                return RedirectToAction("Login", "Usuario");
+            }
             ComentarioRepositorio comentarioRepositorio = new ComentarioRepositorio();
 
             ViewData["Comentarios"] = comentarioRepositorio.Listar();
@@ -65,6 +74,13 @@ namespace Check_Point.Controllers
         [HttpGet]
         public IActionResult Aprovar(int id){//Rejeitar
             
+            if(HttpContext.Session.GetString("nomeUsuario") == null){
+                return RedirectToAction("Login", "Usuario");
+            }
+
+            if(HttpContext.Session.GetString("tipoUsuario") != "adm"){
+                return RedirectToAction("Login", "Usuario");
+            } else {
             ComentarioRepositorio comentarioRepositorio = new ComentarioRepositorio();
             // ComentarioModel comentario = new ComentarioModel(texto: form["texto"], usuario: nomeUsuario); 
             // comentario.Status = "rejeitado";
@@ -74,18 +90,23 @@ namespace Check_Point.Controllers
             // {
                 ViewData["Comentarios"] = comentarioRepositorio.Listar();
             // }
-
+            }
             return View();
         }
 
         [HttpGet]
         public IActionResult Manter(int id){
+
+            if(HttpContext.Session.GetString("nomeUsuario") == null){
+                return RedirectToAction("Login", "Usuario");
+            } else {
             
             ComentarioRepositorio comentarioRepositorio = new ComentarioRepositorio();
             comentarioRepositorio.Manter(id);
 
             ViewData["Comentarios"] = comentarioRepositorio.Listar();
             return RedirectToAction("Aprovar", "Comentario");//redirect pq return view() vai querer uma tela
+            }
         }
     }
 }

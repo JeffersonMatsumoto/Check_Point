@@ -12,10 +12,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <title> @ViewBag.Title </title>
     <link href="/css/main.css" rel="stylesheet" type="text/css"/>
-<<<<<<< HEAD
     <link href="/css/dropdown.css" rel="stylesheet" type="text/css"/>
-=======
->>>>>>> 396ba8f7eea04919091e70bc088059562ccb5d52
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
@@ -45,7 +42,6 @@
                 <a class="logo-escrito" href="../Usuario/Cadastrar">Check Point</a>
 
                 <ul class="pages">
-<<<<<<< HEAD
                     
                     <div class="dropdown">
                     <button class="dropbtn">Comentários</button>
@@ -69,18 +65,6 @@
                             </li> -->
                     
                     @if (Context.Session.GetString("tipoUsuario") == "adm")
-=======
-
-                    <li>
-                        <a href="/Comentario/Cadastrar">Cadastrar comentários</a>
-                    </li>
-
-                    <li>
-                        <a href="/Comentario/Listar">Listar comentários</a>
-                    </li>
-
-                    @if (Context.Session.GetString ("tipoUsuario") == "adm")
->>>>>>> 396ba8f7eea04919091e70bc088059562ccb5d52
                     {
                         <li>
                             <a href="/Usuario/Listar">Usuários cadastrados</a>
@@ -90,19 +74,11 @@
                             <a href="/Comentario/Aprovar">Aprovar ou rejeitar comentários</a>
                         </li>
                     }
-<<<<<<< HEAD
-
-=======
->>>>>>> 396ba8f7eea04919091e70bc088059562ccb5d52
                     @if(Context.Session.GetString("nomeUsuario") != null)
                     {
                         <li>
                             <p class="msg-boasvindas">
-<<<<<<< HEAD
                                 Seja bem vindo, 
-=======
-                                Seja bem vindo,
->>>>>>> 396ba8f7eea04919091e70bc088059562ccb5d52
                             </p>   
                                 <b> 
                                     @Context.Session.GetString("nomeUsuario")
@@ -110,24 +86,12 @@
                         </li>
                     }
                     
-<<<<<<< HEAD
                     @if (Context.Session.GetString("tipoUsuario") != null || Context.Session.GetString("nomeUsuario") != null || Context.Session.GetString("idUsuario") != null)
                     {
                     <li>
-                            <a href="/Usuario/Login"> Sair </a>
+                            <a href="/Usuario/Logout"> Sair </a>
                     </li>
                     }
-=======
-                    <li>
-                        @if(Context.Session.GetString("nomeUsuario") != null)
-                        {
-                            <a href="/Usuario/Login"> Sair </a>
-                            Context.Session.Clear();
-                            Context.Session.Remove("tipoUsuario");
-                        }
-                    </li>
-
->>>>>>> 396ba8f7eea04919091e70bc088059562ccb5d52
                 </ul>
 
             </nav>

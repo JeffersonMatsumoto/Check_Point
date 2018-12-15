@@ -118,6 +118,10 @@ namespace Check_Point.Controllers {
 
         [HttpGet]
         public IActionResult Listar () {
+            if (HttpContext.Session.GetString("tipoUsuario") != "adm")
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
             UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio ();
             ViewData["Usuarios"] = usuarioRepositorio.Listar ();
             return View ();
@@ -222,9 +226,9 @@ namespace Check_Point.Controllers {
                             return RedirectToAction ("Aprovar", "Comentario");
                         }
                         
-                        if (usuario.Tipo == "adm") {
-                            return RedirectToAction ("Listar", "Usuario");
-                        }
+                        // if (usuario.Tipo == "adm") {
+                        //     return RedirectToAction ("Listar", "Usuario");
+                        // }
 
                     }
                     return RedirectToAction ("Cadastrar", "Comentario");
@@ -264,17 +268,10 @@ namespace Check_Point.Controllers {
 
         [HttpGet]
         public IActionResult Logout () {
-<<<<<<< HEAD
-            // HttpContext.Session.Remove("nomeUsuario");
-            // HttpContext.Session.Remove("senhaUsuario");
-            // HttpContext.Session.Remove("tipoUsuario");;
-            // HttpContext.Session.Clear();
-=======
             HttpContext.Session.Remove("nomeUsuario");
             HttpContext.Session.Remove("senhaUsuario");
-            HttpContext.Session.Remove("tipoUsuario");
+            HttpContext.Session.Remove("tipoUsuario");;
             HttpContext.Session.Clear();
->>>>>>> 396ba8f7eea04919091e70bc088059562ccb5d52
             return RedirectToAction ("Login", "Usuario");
         }
     }
