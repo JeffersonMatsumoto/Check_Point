@@ -55,6 +55,11 @@ namespace Check_Point.Repositorios
             }
 
             using(StreamWriter sw = new StreamWriter("comentarios.csv", true)){
+            
+            if (!File.Exists("comentarios.csv"))
+            {
+                StreamWriter sr = new StreamWriter ("comentarios.csv");
+            }
                 if (string.IsNullOrEmpty(comentario.Texto))
                 {
                     return null;

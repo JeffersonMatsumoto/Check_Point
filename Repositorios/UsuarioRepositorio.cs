@@ -9,7 +9,7 @@ namespace Check_Point.Repositorios
     public class UsuarioRepositorio : IUsuario
     {
         public UsuarioModel Cadastrar(UsuarioModel usuario)
-        {
+        {   
             if (File.Exists("usuarios.csv"))
             {
                 usuario.Id = File.ReadAllLines("usuarios.csv").Length + 1;
@@ -18,6 +18,11 @@ namespace Check_Point.Repositorios
             }
 
             using(StreamWriter sw = new StreamWriter("usuarios.csv", true)){
+
+            if (!File.Exists("usuarios.csv"))
+            {
+                StreamWriter sr = new StreamWriter ("usuarios.csv");
+            }
                 if (string.IsNullOrEmpty(usuario.Nome) || string.IsNullOrEmpty(usuario.Email) || string.IsNullOrEmpty(usuario.Senha))
                 {
                     return null;
